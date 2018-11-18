@@ -18,18 +18,19 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('WP_CACHE', true);
-define( 'WPCACHEHOME', '/home/parlemon/www/wp-content/plugins/wp-super-cache/' );
-define('DB_NAME', 'parlemonde-plm');
+define('WP_CACHE', false); //true);
+define( 'WP_MEMORY_LIMIT', '512M' );
+//define( 'WPCACHEHOME', '/tmp/wp-super-cache/' );
+define('DB_NAME', 'plm');
 
 /** MySQL database username */
-define('DB_USER', 'parlemonde-plm');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'XXXXXXX');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
-define('DB_HOST', 'parlemonde-plm.mysql.db');
+define('DB_HOST', 'mysql');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -84,7 +85,7 @@ define('WPLANG', 'fr_FR');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* That's all, stop editing! Happy blogging. */
 /* Multisite */
