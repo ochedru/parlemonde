@@ -33,8 +33,9 @@ git clone https://github.com/larnoult/parlemonde
 docker run --rm --name wordpress_plm --volume C:\path\to\git\parlemonde:/var/www/html --link mysql_plm:mysql -p 28080:80 -e DOMAIN_CURRENT_SITE=localhost:28080 -e NOBLOGREDIRECT=http://localhost:28080 -d wordpress
 ```
 Note: this command line is an example for PowerShell on Windows. If you are using `cmd`, enclose the path around double quotes.
+- Connect your browser at http://localhost:28080.
 
-## Modifications
+## Changes
 - To get the site loading, I had to disable caching in `wp-config.php` but this is highly inefficient:
 ```php
 define('WP_CACHE', false); //true);
@@ -47,7 +48,6 @@ define( 'WP_MEMORY_LIMIT', '512M' );
 ```bash
 chown -R www-data /var/www
 ```
-- `wp-config.php`: configure DOMAIN_CURRENT_SITE and NOBLOGREDIRECT
 
 ## TODO
 - Find a way to enable caching.
